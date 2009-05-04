@@ -1,0 +1,36 @@
+= Jaxy File Uploads
+
+== What is it?
+
+It's a Rails plugin.
+
+== What does it do?
+
+It makes ajax file uploads completely transparent.  They just work, without you (the developer) having to do anything.
+
+== What is required?
+
+jquery.js
+jquery-form.js
+jquery-jaxy.js
+
+== How do I install it?
+
+  script/plugin install git://github.com/adamlogic/jaxy_file_uploads.git
+
+== How do I use it?
+
+Just create a multipart form like you would for any other file upload, then submit the form via ajax.  The Jaxy way is to give the form a class of 'ajax' and put this in your application.js:
+
+  $('form.ajax').jaxy();
+
+== How does it work?
+
+jQuery Form has built-in handling for ajax file uploads.  It uses a common hack of creating a hidden iFrame, submitting the form into the iFrame, then grabbing the contents of the iFrame after the response has loaded.  If you want to return executable JavaScript, your response must be wrapped in a textarea.  Jaxy-file-uploads makes this assuption for you and wraps your response in a textarea.  Jaxy (the jQuery plugin) adds a format field to your request so that Rails knows it is an ajax request (since it is not *actually* an ajax request).
+
+== What if I have problems?
+
+Create an issue here, email me, or better yet, fork it and send me a pull request. 
+
+
+Copyright (c) 2009 [name of plugin creator], released under the MIT license

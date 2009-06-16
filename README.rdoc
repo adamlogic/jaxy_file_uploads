@@ -26,11 +26,11 @@ Just create a multipart form like you would for any other file upload, then subm
 
 == How does it work?
 
-jQuery Form has built-in handling for ajax file uploads.  It uses a common hack of creating a hidden iFrame, submitting the form into the iFrame, then grabbing the contents of the iFrame after the response has loaded.  If you want to return executable JavaScript, your response must be wrapped in a textarea.  Jaxy-file-uploads makes this assuption for you and wraps your response in a textarea.  Jaxy (the jQuery plugin) adds a format field to your request so that Rails knows it is an ajax request (since it is not *actually* an ajax request).
+jQuery Form has built-in handling for ajax file uploads.  It uses a common hack of creating a hidden iFrame, submitting the form into the iFrame, then grabbing the contents of the iFrame after the response has loaded.  If you want to return executable JavaScript, your response must be wrapped in a textarea.  Jaxy-file-uploads makes this assumption for you and wraps your response in a textarea.  Jaxy (the jQuery plugin) adds a format field to your request so that Rails knows it is an ajax request (since it is not *actually* an ajax request).
 
 == What if I have problems?
 
 Create an issue here, email me, or better yet, fork it and send me a pull request. 
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Adam McCrea, released under the MIT license
